@@ -1,20 +1,305 @@
-.plant-one {
-  width: 170px;
-  height: 210px;
-  left: 0;
-  bottom: 20px;
-  z-index: 3;
-  transform: rotate(-4deg);
-}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-.plant-two {
-  width: 155px;
-  height: 190px;
-  right: 0;
-  top: 25px;
-  z-index: 1;
-  transform: rotate(4deg);
-}
+  <title>Daniel Ordóñez | Psicología</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f7f3e9;
+      color: #34443b;
+      line-height: 1.6;
+    }
+
+    header {
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 50px 20px;
+    }
+
+    .hero {
+      width: 100%;
+      max-width: 1100px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 60px;
+    }
+
+    .hero-text {
+      text-align: left;
+    }
+
+    .hero h1 {
+      font-size: 3.4rem;
+      margin-bottom: 15px;
+      color: #34443b;
+      line-height: 1.1;
+    }
+
+    .hero h2 {
+      font-size: 1.4rem;
+      font-weight: normal;
+      margin-bottom: 25px;
+      color: #718477;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      max-width: 550px;
+      margin-bottom: 30px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 13px 25px;
+      background: #d8c98f;
+      color: #34443b;
+      text-decoration: none;
+      border-radius: 25px;
+      font-weight: bold;
+    }
+
+    .button:hover {
+      opacity: 0.85;
+    }
+
+    .hero-images {
+      position: relative;
+      min-height: 520px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .main-photo {
+      width: 75%;
+      height: 460px;
+      object-fit: cover;
+      border-radius: 140px 140px 25px 25px;
+      box-shadow: 0 15px 40px rgba(52, 68, 59, 0.15);
+      position: relative;
+      z-index: 3;
+    }
+
+    .plant {
+      position: absolute;
+      object-fit: cover;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(52, 68, 59, 0.12);
+      z-index: 1;
+    }
+
+    .plant-one {
+      width: 150px;
+      height: 190px;
+      left: -55px;
+      bottom: 0;
+      transform: rotate(-6deg);
+    }
+
+    .plant-two {
+      width: 140px;
+      height: 175px;
+      right: -55px;
+      top: 0;
+      transform: rotate(6deg);
+    }
+
+    section {
+      padding: 80px 20px;
+      background: #fffdf8;
+    }
+
+    .section-content {
+      max-width: 850px;
+      margin: auto;
+    }
+
+    section h2 {
+      font-size: 2rem;
+      margin-bottom: 30px;
+      text-align: center;
+      color: #34443b;
+    }
+
+    section p {
+      max-width: 750px;
+      margin: 0 auto 18px;
+      font-size: 1.05rem;
+    }
+
+    .about-box {
+      background: #f7f3e9;
+      padding: 40px;
+      border-radius: 22px;
+      box-shadow: 0 8px 25px rgba(52, 68, 59, 0.06);
+    }
+
+    footer {
+      padding: 30px 20px;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #718477;
+      background: #f7f3e9;
+    }
+
+    @media (max-width: 800px) {
+      .hero {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .hero-text {
+        text-align: center;
+      }
+
+      .hero p {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .hero h1 {
+        font-size: 2.6rem;
+      }
+
+      .hero-images {
+        min-height: 430px;
+      }
+
+      .main-photo {
+        height: 390px;
+      }
+
+      .plant-one {
+        left: -15px;
+      }
+
+      .plant-two {
+        right: -15px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 2.3rem;
+      }
+
+      .hero h2 {
+        font-size: 1.2rem;
+      }
+
+      .about-box {
+        padding: 25px;
+      }
+
+      .plant-one {
+        width: 100px;
+        height: 130px;
+        left: -5px;
+      }
+
+      .plant-two {
+        width: 95px;
+        height: 120px;
+        right: -5px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="hero">
+
+      <div class="hero-text">
+        <h1>Daniel Ordóñez Puente</h1>
+
+        <h2>Psicólogo en formación</h2>
+
+        <p>
+          Máster en Psicología General Sanitaria en curso
+          y formación en Terapia Sistémica.
+        </p>
+
+        <a href="#sobre-mi" class="button">Conóceme</a>
+      </div>
+
+      <div class="hero-images">
+
+        <img
+          src="DC0B75B4-D724-47FB-9446-FDF0AFB4187E.PNG"
+          alt="Daniel Ordóñez Puente"
+          class="main-photo"
+        >
+
+        <img
+          src="pexels-skylake-19859227.jpg"
+          alt="Planta de interior"
+          class="plant plant-one"
+        >
+
+        <img
+          src="pexels-yunusemresahinoglu-11105528.jpg"
+          alt="Planta de interior"
+          class="plant plant-two"
+        >
+
+      </div>
+
+    </div>
+  </header>
+
+
+  <section id="sobre-mi">
+    <div class="section-content">
+
+      <h2>Sobre mí</h2>
+
+      <div class="about-box">
+
+        <p>
+          Soy Daniel Ordóñez Puente, psicólogo en formación y actualmente
+          estudiante del Máster en Psicología General Sanitaria.
+        </p>
+
+        <p>
+          Mi formación se complementa con un Experto en Terapia Sistémica
+          y con experiencia en intervención con infancia y adolescencia,
+          especialmente en el ámbito del TEA.
+        </p>
+
+        <p>
+          También he realizado mis prácticas del máster en Ruber Internacional,
+          dentro de la Unidad de Pediatría, Adolescencia y Adulto Joven.
+        </p>
+
+        <p>
+          Mi forma de entender la psicología parte de una mirada cercana,
+          individualizada y basada en la evidencia científica.
+        </p>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <footer>
+    © 2026 Daniel Ordóñez Puente
+  </footer>
 
 </body>
 </html>
