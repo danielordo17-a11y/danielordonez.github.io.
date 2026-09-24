@@ -4,61 +4,137 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Daniel Ordóñez | Psicología</title>
+  <title>Daniel Ordóñez Puente | Psicología</title>
+
+  <meta name="description" content="Daniel Ordóñez Puente. Psicólogo en formación, Máster en Psicología General Sanitaria en curso y formación en Terapia Sistémica. Psicología cercana y basada en la evidencia.">
 
   <style>
+
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       font-family: Arial, sans-serif;
       background: #f7f3e9;
       color: #34443b;
-      line-height: 1.6;
+      line-height: 1.7;
     }
 
+    a {
+      color: inherit;
+    }
+
+    /* =========================
+       NAVEGACIÓN
+    ========================= */
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255, 253, 248, 0.96);
+      border-bottom: 1px solid rgba(52, 68, 59, 0.08);
+      backdrop-filter: blur(10px);
+    }
+
+    .nav-content {
+      max-width: 1100px;
+      margin: auto;
+      padding: 17px 25px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.05rem;
+      color: #34443b;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 25px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      font-size: 0.9rem;
+      color: #5e7065;
+    }
+
+    .nav-links a:hover {
+      color: #34443b;
+    }
+
+    /* =========================
+       PORTADA
+    ========================= */
+
     header {
-      min-height: 90vh;
+      min-height: calc(100vh - 65px);
       display: flex;
       align-items: center;
-      justify-content: center;
-      padding: 50px 20px;
+      padding: 70px 25px 80px;
+      overflow: hidden;
     }
 
     .hero {
       width: 100%;
       max-width: 1100px;
+      margin: auto;
       display: grid;
       grid-template-columns: 1fr 1fr;
       align-items: center;
-      gap: 60px;
+      gap: 65px;
     }
 
     .hero-text {
       text-align: left;
     }
 
-    .hero h1 {
-      font-size: 3.4rem;
+    .small-title {
+      color: #718477;
+      font-size: 0.9rem;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
       margin-bottom: 15px;
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      margin-bottom: 18px;
       color: #34443b;
-      line-height: 1.1;
+      line-height: 1.08;
     }
 
     .hero h2 {
       font-size: 1.4rem;
       font-weight: normal;
-      margin-bottom: 25px;
+      margin-bottom: 23px;
       color: #718477;
     }
 
     .hero p {
-      font-size: 1.1rem;
-      max-width: 550px;
+      font-size: 1.08rem;
+      max-width: 570px;
       margin-bottom: 30px;
+      color: #4f5e54;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 13px;
+      flex-wrap: wrap;
     }
 
     .button {
@@ -67,28 +143,41 @@
       background: #d8c98f;
       color: #34443b;
       text-decoration: none;
-      border-radius: 25px;
+      border-radius: 28px;
       font-weight: bold;
+      transition: 0.2s;
     }
 
     .button:hover {
-      opacity: 0.85;
+      transform: translateY(-2px);
+      opacity: 0.9;
     }
+
+    .button-secondary {
+      background: transparent;
+      border: 1px solid #718477;
+      color: #52655a;
+    }
+
+    /* =========================
+       FOTOS Y PLANTAS
+    ========================= */
 
     .hero-images {
       position: relative;
-      min-height: 520px;
+      min-height: 560px;
       display: flex;
       align-items: center;
       justify-content: center;
+      padding: 25px 55px;
     }
 
     .main-photo {
-      width: 75%;
-      height: 460px;
+      width: 76%;
+      height: 480px;
       object-fit: cover;
-      border-radius: 140px 140px 25px 25px;
-      box-shadow: 0 15px 40px rgba(52, 68, 59, 0.15);
+      border-radius: 150px 150px 30px 30px;
+      box-shadow: 0 18px 45px rgba(52, 68, 59, 0.16);
       position: relative;
       z-index: 3;
     }
@@ -97,68 +186,297 @@
       position: absolute;
       object-fit: cover;
       border-radius: 20px;
-      box-shadow: 0 10px 30px rgba(52, 68, 59, 0.12);
-      z-index: 1;
+      box-shadow: 0 10px 30px rgba(52, 68, 59, 0.13);
     }
 
     .plant-one {
-      width: 150px;
-      height: 190px;
-      left: -55px;
-      bottom: 0;
+      width: 145px;
+      height: 185px;
+      left: 0;
+      bottom: 25px;
       transform: rotate(-6deg);
+      z-index: 1;
     }
 
     .plant-two {
-      width: 140px;
-      height: 175px;
-      right: -55px;
-      top: 0;
+      width: 135px;
+      height: 170px;
+      right: 0;
+      top: 25px;
       transform: rotate(6deg);
+      z-index: 1;
     }
 
+    /* =========================
+       SECCIONES
+    ========================= */
+
     section {
-      padding: 80px 20px;
+      padding: 90px 25px;
+    }
+
+    section:nth-of-type(even) {
       background: #fffdf8;
     }
 
     .section-content {
-      max-width: 850px;
+      max-width: 1000px;
       margin: auto;
     }
 
+    .section-intro {
+      text-align: center;
+      max-width: 700px;
+      margin: -10px auto 45px;
+      color: #617066;
+    }
+
     section h2 {
-      font-size: 2rem;
-      margin-bottom: 30px;
+      font-size: 2.25rem;
+      margin-bottom: 20px;
       text-align: center;
       color: #34443b;
+      line-height: 1.2;
+    }
+
+    section h3 {
+      color: #34443b;
+      margin-bottom: 10px;
     }
 
     section p {
-      max-width: 750px;
-      margin: 0 auto 18px;
-      font-size: 1.05rem;
+      margin-bottom: 18px;
+      color: #526057;
     }
+
+    /* =========================
+       SOBRE MÍ
+    ========================= */
 
     .about-box {
       background: #f7f3e9;
-      padding: 40px;
-      border-radius: 22px;
+      padding: 45px;
+      border-radius: 25px;
       box-shadow: 0 8px 25px rgba(52, 68, 59, 0.06);
     }
 
-    footer {
-      padding: 30px 20px;
+    .about-box p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* =========================
+       FORMACIÓN
+    ========================= */
+
+    .timeline {
+      max-width: 800px;
+      margin: 45px auto 0;
+    }
+
+    .timeline-item {
+      background: #f7f3e9;
+      border-left: 4px solid #d8c98f;
+      padding: 25px 30px;
+      margin-bottom: 20px;
+      border-radius: 0 18px 18px 0;
+    }
+
+    .timeline-item strong {
+      display: block;
+      font-size: 1.08rem;
+      margin-bottom: 5px;
+      color: #34443b;
+    }
+
+    .timeline-item span {
+      color: #718477;
+      font-size: 0.92rem;
+    }
+
+    /* =========================
+       ÁREAS
+    ========================= */
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+      margin-top: 45px;
+    }
+
+    .card {
+      background: #f7f3e9;
+      padding: 30px;
+      border-radius: 22px;
+      border: 1px solid rgba(52, 68, 59, 0.06);
+    }
+
+    .card-number {
+      font-size: 0.85rem;
+      color: #9b8c52;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      margin-bottom: 0;
+      font-size: 0.98rem;
+    }
+
+    /* =========================
+       ENFOQUE
+    ========================= */
+
+    .approach {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 25px;
+      margin-top: 45px;
+    }
+
+    .approach-box {
+      padding: 35px;
+      background: #f7f3e9;
+      border-radius: 22px;
+    }
+
+    .approach-box h3 {
+      font-size: 1.25rem;
+      margin-bottom: 12px;
+    }
+
+    /* =========================
+       PROCESO
+    ========================= */
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+      margin-top: 45px;
+    }
+
+    .step {
       text-align: center;
-      font-size: 0.9rem;
+      padding: 25px 18px;
+      background: #f7f3e9;
+      border-radius: 20px;
+    }
+
+    .step-number {
+      width: 42px;
+      height: 42px;
+      margin: 0 auto 15px;
+      border-radius: 50%;
+      background: #d8c98f;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      color: #34443b;
+    }
+
+    .step p {
+      font-size: 0.92rem;
+      margin: 0;
+    }
+
+    /* =========================
+       FAQ
+    ========================= */
+
+    .faq {
+      max-width: 800px;
+      margin: 40px auto 0;
+    }
+
+    details {
+      background: #f7f3e9;
+      margin-bottom: 13px;
+      border-radius: 15px;
+      padding: 20px 23px;
+    }
+
+    summary {
+      cursor: pointer;
+      font-weight: bold;
+      color: #34443b;
+    }
+
+    details p {
+      margin-top: 15px;
+      margin-bottom: 0;
+      font-size: 0.97rem;
+    }
+
+    /* =========================
+       CONTACTO
+    ========================= */
+
+    .contact-box {
+      max-width: 750px;
+      margin: 40px auto 0;
+      text-align: center;
+      background: #f7f3e9;
+      padding: 45px;
+      border-radius: 25px;
+    }
+
+    .contact-box p {
+      margin-bottom: 25px;
+    }
+
+    .contact-email {
+      display: inline-block;
+      font-size: 1.1rem;
+      font-weight: bold;
+      margin-bottom: 25px;
+      color: #34443b;
+      text-decoration: none;
+    }
+
+    .social-links {
+      margin-top: 25px;
+      display: flex;
+      justify-content: center;
+      gap: 22px;
+    }
+
+    .social-links a {
+      color: #718477;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      padding: 35px 20px;
+      text-align: center;
+      font-size: 0.88rem;
       color: #718477;
       background: #f7f3e9;
     }
 
-    @media (max-width: 800px) {
+    /* =========================
+       MÓVIL
+    ========================= */
+
+    @media (max-width: 850px) {
+
+      .nav-links {
+        display: none;
+      }
+
+      header {
+        padding-top: 50px;
+      }
+
       .hero {
         grid-template-columns: 1fr;
-        gap: 30px;
+        gap: 35px;
       }
 
       .hero-text {
@@ -170,72 +488,159 @@
         margin-right: auto;
       }
 
+      .buttons {
+        justify-content: center;
+      }
+
       .hero h1 {
-        font-size: 2.6rem;
+        font-size: 2.8rem;
       }
 
       .hero-images {
-        min-height: 430px;
+        min-height: 480px;
       }
 
       .main-photo {
-        height: 390px;
+        height: 430px;
       }
 
-      .plant-one {
-        left: -15px;
+      .cards {
+        grid-template-columns: 1fr;
       }
 
-      .plant-two {
-        right: -15px;
+      .approach {
+        grid-template-columns: 1fr;
+      }
+
+      .steps {
+        grid-template-columns: 1fr 1fr;
       }
     }
 
     @media (max-width: 600px) {
+
+      section {
+        padding: 65px 20px;
+      }
+
       .hero h1 {
-        font-size: 2.3rem;
+        font-size: 2.35rem;
       }
 
       .hero h2 {
         font-size: 1.2rem;
       }
 
-      .about-box {
-        padding: 25px;
+      .hero-images {
+        min-height: 410px;
+        padding: 20px 25px;
+      }
+
+      .main-photo {
+        width: 78%;
+        height: 370px;
       }
 
       .plant-one {
-        width: 100px;
-        height: 130px;
-        left: -5px;
+        width: 90px;
+        height: 120px;
+        left: 0;
+        bottom: 15px;
       }
 
       .plant-two {
-        width: 95px;
-        height: 120px;
-        right: -5px;
+        width: 85px;
+        height: 110px;
+        right: 0;
+        top: 15px;
+      }
+
+      .about-box,
+      .contact-box {
+        padding: 28px 23px;
+      }
+
+      .steps {
+        grid-template-columns: 1fr;
+      }
+
+      section h2 {
+        font-size: 1.9rem;
       }
     }
+
   </style>
 </head>
 
+
 <body>
 
-  <header>
+  <!-- NAVEGACIÓN -->
+
+  <nav>
+    <div class="nav-content">
+
+      <a href="#inicio" class="logo">
+        Daniel Ordóñez
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#sobre-mi">Sobre mí</a></li>
+        <li><a href="#formacion">Formación</a></li>
+        <li><a href="#areas">Áreas</a></li>
+        <li><a href="#enfoque">Enfoque</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+
+    </div>
+  </nav>
+
+
+  <!-- INICIO -->
+
+  <header id="inicio">
+
     <div class="hero">
 
       <div class="hero-text">
-        <h1>Daniel Ordóñez Puente</h1>
 
-        <h2>Psicólogo en formación</h2>
+        <div class="small-title">
+          Psicología
+        </div>
+
+        <h1>
+          Daniel Ordóñez Puente
+        </h1>
+
+        <h2>
+          Psicólogo en formación
+        </h2>
 
         <p>
           Máster en Psicología General Sanitaria en curso
           y formación en Terapia Sistémica.
         </p>
 
-        <a href="#sobre-mi" class="button">Conóceme</a>
+        <p>
+          Un espacio para comprender lo que te ocurre,
+          ponerle palabras y trabajar en ello desde una
+          psicología cercana y basada en la evidencia.
+        </p>
+
+        <div class="buttons">
+
+          <a href="#sobre-mi" class="button">
+            Conóceme
+          </a>
+
+          <a href="#contacto" class="button button-secondary">
+            Contactar
+          </a>
+
+        </div>
+
       </div>
+
 
       <div class="hero-images">
 
@@ -260,46 +665,636 @@
       </div>
 
     </div>
+
   </header>
 
 
+  <!-- SOBRE MÍ -->
+
   <section id="sobre-mi">
+
     <div class="section-content">
 
-      <h2>Sobre mí</h2>
+      <h2>
+        Sobre mí
+      </h2>
+
+      <p class="section-intro">
+        Conocer a la persona que hay detrás de la consulta
+        también forma parte de empezar un proceso.
+      </p>
 
       <div class="about-box">
 
         <p>
-          Soy Daniel Ordóñez Puente, psicólogo en formación y actualmente
-          estudiante del Máster en Psicología General Sanitaria.
+          Soy Daniel Ordóñez Puente, psicólogo en formación
+          y actualmente estudiante del Máster en Psicología
+          General Sanitaria.
         </p>
 
         <p>
-          Mi formación se complementa con un Experto en Terapia Sistémica
-          y con experiencia en intervención con infancia y adolescencia,
-          especialmente en el ámbito del TEA.
+          Mi formación se complementa con formación en
+          Terapia Sistémica y con experiencia en intervención
+          con infancia y adolescencia, especialmente en el
+          ámbito del TEA.
         </p>
 
         <p>
-          También he realizado mis prácticas del máster en Ruber Internacional,
-          dentro de la Unidad de Pediatría, Adolescencia y Adulto Joven.
+          Durante mi formación he tenido la oportunidad de
+          conocer diferentes contextos de intervención
+          psicológica, incluyendo mis prácticas del máster
+          en Ruber Internacional, dentro de la Unidad de
+          Pediatría, Adolescencia y Adulto Joven.
         </p>
 
         <p>
-          Mi forma de entender la psicología parte de una mirada cercana,
-          individualizada y basada en la evidencia científica.
+          Entiendo la psicología como un espacio en el que
+          poder comprender qué está ocurriendo, encontrar
+          nuevas formas de afrontarlo y trabajar hacia
+          objetivos que tengan sentido para cada persona.
         </p>
 
       </div>
 
     </div>
+
   </section>
 
 
+  <!-- FORMACIÓN Y EXPERIENCIA -->
+
+  <section id="formacion">
+
+    <div class="section-content">
+
+      <h2>
+        Formación y experiencia
+      </h2>
+
+      <p class="section-intro">
+        Una formación que continúa creciendo junto con
+        la experiencia práctica.
+      </p>
+
+      <div class="timeline">
+
+        <div class="timeline-item">
+
+          <strong>
+            Grado en Psicología
+          </strong>
+
+          <span>
+            Universidad Autónoma de Madrid
+          </span>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+          <strong>
+            Máster en Psicología General Sanitaria
+          </strong>
+
+          <span>
+            En curso
+          </span>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+          <strong>
+            Experto en Terapia Sistémica
+          </strong>
+
+          <span>
+            Formación en curso
+          </span>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+          <strong>
+            Experiencia en intervención con infancia y TEA
+          </strong>
+
+          <span>
+            Experiencia como terapeuta sombra en contextos especializados y educativos
+          </span>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+          <strong>
+            Prácticas del Máster en Psicología General Sanitaria
+          </strong>
+
+          <span>
+            Ruber Internacional · Unidad de Pediatría, Adolescencia y Adulto Joven
+          </span>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ÁREAS -->
+
+  <section id="areas">
+
+    <div class="section-content">
+
+      <h2>
+        Áreas de interés
+      </h2>
+
+      <p class="section-intro">
+        Algunas de las áreas que forman parte de mis
+        intereses profesionales y de mi trayectoria formativa.
+      </p>
+
+
+      <div class="cards">
+
+        <div class="card">
+
+          <div class="card-number">
+            01
+          </div>
+
+          <h3>
+            Infancia
+          </h3>
+
+          <p>
+            Acompañamiento psicológico adaptado a las
+            necesidades de niños y niñas y a su contexto.
+          </p>
+
+        </div>
+
+
+        <div class="card">
+
+          <div class="card-number">
+            02
+          </div>
+
+          <h3>
+            Adolescencia
+          </h3>
+
+          <p>
+            Una etapa de cambios en la que pueden aparecer
+            dificultades emocionales, familiares o personales.
+          </p>
+
+        </div>
+
+
+        <div class="card">
+
+          <div class="card-number">
+            03
+          </div>
+
+          <h3>
+            Regulación emocional
+          </h3>
+
+          <p>
+            Comprender las emociones y desarrollar recursos
+            para relacionarse con ellas de una manera diferente.
+          </p>
+
+        </div>
+
+
+        <div class="card">
+
+          <div class="card-number">
+            04
+          </div>
+
+          <h3>
+            Familia y relaciones
+          </h3>
+
+          <p>
+            Comprender las dificultades teniendo en cuenta
+            también las relaciones y el contexto en el que aparecen.
+          </p>
+
+        </div>
+
+
+        <div class="card">
+
+          <div class="card-number">
+            05
+          </div>
+
+          <h3>
+            TEA
+          </h3>
+
+          <p>
+            Experiencia en intervención con personas con
+            trastorno del espectro autista, especialmente durante
+            la infancia.
+          </p>
+
+        </div>
+
+
+        <div class="card">
+
+          <div class="card-number">
+            06
+          </div>
+
+          <h3>
+            Bienestar psicológico
+          </h3>
+
+          <p>
+            Un espacio para comprender dificultades que pueden
+            estar interfiriendo en el día a día y trabajar sobre ellas.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ENFOQUE -->
+
+  <section id="enfoque">
+
+    <div class="section-content">
+
+      <h2>
+        Cómo entiendo la psicología
+      </h2>
+
+      <p class="section-intro">
+        Cercanía y rigor pueden formar parte del mismo proceso.
+      </p>
+
+
+      <div class="approach">
+
+        <div class="approach-box">
+
+          <h3>
+            Basada en la evidencia
+          </h3>
+
+          <p>
+            Mi forma de entender la intervención psicológica
+            parte del conocimiento científico disponible y de
+            intervenciones respaldadas por la investigación.
+          </p>
+
+        </div>
+
+
+        <div class="approach-box">
+
+          <h3>
+            Adaptada a cada persona
+          </h3>
+
+          <p>
+            No todas las personas necesitan lo mismo. Por eso
+            considero importante conocer cada situación y adaptar
+            el trabajo a sus necesidades, objetivos y contexto.
+          </p>
+
+        </div>
+
+
+        <div class="approach-box">
+
+          <h3>
+            Con objetivos claros
+          </h3>
+
+          <p>
+            La terapia puede ser un espacio para comprender lo
+            que ocurre, pero también para trabajar de forma activa
+            sobre aquello que se quiere cambiar.
+          </p>
+
+        </div>
+
+
+        <div class="approach-box">
+
+          <h3>
+            Una mirada sistémica
+          </h3>
+
+          <p>
+            Mi formación en Terapia Sistémica me lleva a prestar
+            atención también a las relaciones y al contexto en el
+            que cada persona se desarrolla.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- PROCESO -->
+
+  <section>
+
+    <div class="section-content">
+
+      <h2>
+        ¿Cómo sería empezar?
+      </h2>
+
+      <p class="section-intro">
+        Dar el primer paso no requiere tener todo claro.
+      </p>
+
+
+      <div class="steps">
+
+        <div class="step">
+
+          <div class="step-number">
+            1
+          </div>
+
+          <h3>
+            Contacto
+          </h3>
+
+          <p>
+            Puedes escribirme para contarme brevemente
+            qué estás buscando.
+          </p>
+
+        </div>
+
+
+        <div class="step">
+
+          <div class="step-number">
+            2
+          </div>
+
+          <h3>
+            Conocernos
+          </h3>
+
+          <p>
+            Hablaremos de tu situación y de aquello que
+            te gustaría trabajar.
+          </p>
+
+        </div>
+
+
+        <div class="step">
+
+          <div class="step-number">
+            3
+          </div>
+
+          <h3>
+            Establecer objetivos
+          </h3>
+
+          <p>
+            Definiremos juntos qué queremos trabajar
+            y cómo podemos abordarlo.
+          </p>
+
+        </div>
+
+
+        <div class="step">
+
+          <div class="step-number">
+            4
+          </div>
+
+          <h3>
+            Trabajar en ello
+          </h3>
+
+          <p>
+            Iremos revisando el proceso y ajustándolo
+            según las necesidades que vayan apareciendo.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- FAQ -->
+
+  <section>
+
+    <div class="section-content">
+
+      <h2>
+        Preguntas frecuentes
+      </h2>
+
+      <p class="section-intro">
+        Algunas dudas habituales antes de dar el primer paso.
+      </p>
+
+
+      <div class="faq">
+
+        <details>
+
+          <summary>
+            ¿Tengo que saber exactamente qué me pasa para pedir ayuda?
+          </summary>
+
+          <p>
+            No. No es necesario llegar a consulta con un diagnóstico
+            ni tener claro exactamente qué está ocurriendo. Parte del
+            proceso consiste precisamente en comprender juntos la situación.
+          </p>
+
+        </details>
+
+
+        <details>
+
+          <summary>
+            ¿Cómo puedo saber si la terapia es para mí?
+          </summary>
+
+          <p>
+            El primer contacto puede servir para explicar qué estás
+            buscando y valorar si el tipo de acompañamiento que puedo
+            ofrecer encaja con tus necesidades.
+          </p>
+
+        </details>
+
+
+        <details>
+
+          <summary>
+            ¿Trabajas con niños y adolescentes?
+          </summary>
+
+          <p>
+            La infancia y la adolescencia forman parte de mis principales
+            áreas de interés y experiencia, especialmente en intervención
+            relacionada con el TEA.
+          </p>
+
+        </details>
+
+
+        <details>
+
+          <summary>
+            ¿Las sesiones pueden ser online?
+          </summary>
+
+          <p>
+            La modalidad de atención se concretará según la situación
+            profesional y las condiciones disponibles en cada momento.
+          </p>
+
+        </details>
+
+
+        <details>
+
+          <summary>
+            ¿Cómo puedo contactar contigo?
+          </summary>
+
+          <p>
+            Puedes escribirme directamente a través del correo electrónico
+            que encontrarás en la sección de contacto.
+          </p>
+
+        </details>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- CONTACTO -->
+
+  <section id="contacto">
+
+    <div class="section-content">
+
+      <h2>
+        ¿Hablamos?
+      </h2>
+
+      <p class="section-intro">
+        Si estás pensando en empezar un proceso psicológico,
+        puedes escribirme y contarme qué estás buscando.
+      </p>
+
+
+      <div class="contact-box">
+
+        <p>
+          El primer contacto puede servir para resolver tus dudas
+          y conocer mejor qué necesitas.
+        </p>
+
+        <a
+          href="mailto:danielordo17@gmail.com"
+          class="contact-email"
+        >
+          danielordo17@gmail.com
+        </a>
+
+        <br>
+
+        <a
+          href="mailto:danielordo17@gmail.com"
+          class="button"
+        >
+          Contactar
+        </a>
+
+
+        <div class="social-links">
+
+          <a
+            href="https://www.instagram.com/daniel.ordonez.psicologo/"
+            target="_blank"
+          >
+            Instagram
+          </a>
+
+          <a
+            href="https://www.tiktok.com/"
+            target="_blank"
+          >
+            TikTok
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- FOOTER -->
+
   <footer>
-    © 2026 Daniel Ordóñez Puente
+
+    <p>
+      © 2026 Daniel Ordóñez Puente
+    </p>
+
+    <p>
+      Psicólogo en formación · Máster en Psicología General Sanitaria en curso
+    </p>
+
   </footer>
+
 
 </body>
 </html>
