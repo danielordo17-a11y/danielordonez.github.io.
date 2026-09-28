@@ -6,8 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Daniel Ordóñez | Psicología</title>
-
-  <meta name="description" content="Daniel Ordóñez Puente. Psicólogo General Sanitario con formación en Terapia Sistémica. Psicología cercana y basada en la evidencia.">
+  <meta name="description" content="Daniel Ordóñez Puente. Psicología cercana y basada en la evidencia.">
 
   <style>
     * {
@@ -18,26 +17,24 @@
 
     html {
       scroll-behavior: smooth;
+      scroll-padding-top: 90px;
     }
 
     body {
       font-family: Arial, Helvetica, sans-serif;
       background: #f7f3e9;
       color: #34443b;
-      line-height: 1.6;
+      line-height: 1.7;
     }
 
-    /* =========================
-       NAVEGACIÓN
-    ========================= */
+    /* NAVEGACIÓN */
 
     nav {
       position: sticky;
       top: 0;
       z-index: 100;
-      background: rgba(247, 243, 233, 0.96);
-      backdrop-filter: blur(8px);
-      border-bottom: 1px solid rgba(52, 68, 59, 0.08);
+      background: rgba(247, 243, 233, 0.97);
+      border-bottom: 1px solid rgba(52, 68, 59, 0.10);
     }
 
     .nav-container {
@@ -47,6 +44,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      gap: 25px;
     }
 
     .logo {
@@ -54,87 +52,88 @@
       font-weight: 600;
       color: #34443b;
       text-decoration: none;
+      white-space: nowrap;
     }
 
     .nav-links {
       display: flex;
-      gap: 25px;
+      gap: 23px;
       list-style: none;
+      align-items: center;
     }
 
     .nav-links a {
       text-decoration: none;
       color: #34443b;
-      font-size: 14px;
-      transition: 0.3s;
+      font-size: 13px;
+      transition: color 0.3s;
     }
 
     .nav-links a:hover {
-      color: #718477;
+      color: #879887;
     }
 
-    /* =========================
-       HERO
-    ========================= */
+    /* PORTADA */
 
     .hero {
       max-width: 1150px;
+      min-height: 690px;
       margin: auto;
-      min-height: 650px;
-      padding: 80px 30px;
+      padding: 75px 30px 85px;
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 60px;
+      gap: 55px;
       align-items: center;
     }
 
     .hero-text {
-      max-width: 550px;
+      max-width: 540px;
     }
 
-    .hero-text .small-title {
+    .small-title {
       color: #718477;
-      font-size: 14px;
-      letter-spacing: 1px;
+      font-size: 13px;
+      letter-spacing: 2px;
       text-transform: uppercase;
-      margin-bottom: 15px;
+      margin-bottom: 20px;
     }
 
     .hero h1 {
-      font-size: clamp(45px, 6vw, 72px);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(48px, 5.6vw, 72px);
+      font-weight: 400;
       line-height: 1.05;
-      font-weight: 500;
-      margin-bottom: 20px;
-      color: #34443b;
+      letter-spacing: -1.5px;
+      margin-bottom: 22px;
     }
 
     .hero h2 {
-      font-size: 23px;
+      color: #718477;
+      font-size: 21px;
       font-weight: 400;
       margin-bottom: 20px;
-      color: #718477;
     }
 
     .hero p {
-      font-size: 17px;
-      max-width: 520px;
+      max-width: 490px;
+      color: #59645c;
+      font-size: 16px;
       margin-bottom: 30px;
-      color: #4f5b54;
     }
 
     .buttons {
       display: flex;
-      gap: 15px;
       flex-wrap: wrap;
+      gap: 13px;
     }
 
     .button {
       display: inline-block;
-      padding: 13px 23px;
+      padding: 12px 23px;
       border-radius: 30px;
       text-decoration: none;
-      transition: 0.3s;
       font-size: 14px;
+      transition: 0.3s;
     }
 
     .button.primary {
@@ -149,67 +148,77 @@
     .button.secondary {
       border: 1px solid #718477;
       color: #34443b;
-      background: transparent;
     }
 
     .button.secondary:hover {
-      background: #e9e2cd;
+      background: #ece6d6;
     }
 
-    /* =========================
-       FOTOS DEL HERO
-    ========================= */
+    /* FOTOGRAFÍAS: RETRATO PROFESIONAL */
 
     .hero-images {
       position: relative;
-      height: 540px;
       width: 100%;
+      max-width: 510px;
+      height: 550px;
+      margin: auto;
+      isolation: isolate;
     }
 
+    /* Marco de la foto principal */
     .main-photo {
       position: absolute;
-      width: 70%;
-      height: 430px;
-      object-fit: cover;
-      object-position: center;
-      right: 10%;
-      top: 40px;
-      border-radius: 180px 180px 20px 20px;
       z-index: 3;
-      box-shadow: 0 20px 45px rgba(52, 68, 59, 0.14);
-      background: #e9e2cd;
+      top: 35px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 72%;
+      height: 455px;
+      padding: 10px;
+      object-fit: contain;
+      object-position: center;
+      background: #eee7d8;
+      border: 1px solid #ded5c2;
+      border-radius: 24px;
+      box-shadow: 0 18px 45px rgba(52, 68, 59, 0.14);
     }
 
+    /* Planta inferior izquierda */
     .plant-one {
       position: absolute;
-      width: 35%;
-      height: 210px;
-      object-fit: cover;
-      left: 0;
-      bottom: 35px;
-      border-radius: 25px;
       z-index: 1;
-      box-shadow: 0 12px 30px rgba(52, 68, 59, 0.10);
+      left: 0;
+      bottom: 12px;
+      width: 32%;
+      height: 185px;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 18px;
+      box-shadow: 0 10px 28px rgba(52, 68, 59, 0.10);
     }
 
+    /* Planta superior derecha */
     .plant-two {
       position: absolute;
-      width: 30%;
-      height: 180px;
-      object-fit: cover;
+      z-index: 1;
       right: 0;
       top: 0;
-      border-radius: 25px;
-      z-index: 1;
-      box-shadow: 0 12px 30px rgba(52, 68, 59, 0.10);
+      width: 29%;
+      height: 160px;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 18px;
+      box-shadow: 0 10px 28px rgba(52, 68, 59, 0.10);
     }
 
-    /* =========================
-       SECCIONES
-    ========================= */
+    /* SECCIONES */
 
     section {
-      padding: 90px 30px;
+      padding: 85px 30px;
+    }
+
+    section:nth-of-type(even) {
+      background: #f0ebdf;
     }
 
     .section-container {
@@ -217,87 +226,114 @@
       margin: auto;
     }
 
-    section:nth-child(even) {
-      background: #f1ecdf;
-    }
-
     .section-title {
-      font-size: 38px;
-      font-weight: 500;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 39px;
+      font-weight: 400;
+      line-height: 1.2;
       margin-bottom: 25px;
       color: #34443b;
     }
 
     .section-text {
-      font-size: 17px;
-      color: #4f5b54;
       max-width: 800px;
+      color: #59645c;
+      font-size: 16px;
     }
 
-    /* =========================
-       FORMACIÓN
-    ========================= */
+    /* FORMACIÓN Y EXPERIENCIA */
 
     .cards {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 25px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 22px;
       margin-top: 35px;
     }
 
     .card {
-      background: #f7f3e9;
-      padding: 30px;
-      border-radius: 20px;
-      border: 1px solid rgba(52, 68, 59, 0.08);
+      background: #f9f6ef;
+      padding: 27px;
+      border: 1px solid rgba(52, 68, 59, 0.09);
+      border-radius: 18px;
     }
 
     .card h3 {
-      font-size: 20px;
-      margin-bottom: 10px;
+      font-size: 18px;
       font-weight: 500;
+      line-height: 1.4;
+      margin-bottom: 10px;
     }
 
     .card p {
-      color: #5b665f;
-      font-size: 15px;
+      font-size: 14px;
+      color: #687168;
     }
 
-    /* =========================
-       ÁREAS
-    ========================= */
+    /* ÁREAS DE INTERÉS */
 
     .areas {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 18px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 17px;
       margin-top: 35px;
     }
 
     .area {
-      background: #f7f3e9;
-      padding: 22px;
-      border-radius: 18px;
-      border-left: 4px solid #d8c98f;
+      padding: 23px;
+      background: #f9f6ef;
+      border-left: 3px solid #d8c98f;
+      border-radius: 5px 15px 15px 5px;
     }
 
     .area h3 {
-      font-size: 18px;
+      font-size: 17px;
       font-weight: 500;
-      margin-bottom: 5px;
+      margin-bottom: 7px;
     }
 
     .area p {
+      color: #687168;
       font-size: 14px;
-      color: #5b665f;
     }
 
-    /* =========================
-       FAQ
-    ========================= */
+    /* CÓMO EMPIEZO */
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 25px;
+      margin-top: 35px;
+    }
+
+    .step-number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: #e7dfc9;
+      color: #34443b;
+      margin-bottom: 15px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 18px;
+    }
+
+    .step h3 {
+      font-size: 17px;
+      font-weight: 500;
+      margin-bottom: 8px;
+    }
+
+    .step p {
+      font-size: 14px;
+      color: #687168;
+    }
+
+    /* PREGUNTAS FRECUENTES */
 
     .faq {
-      margin-top: 35px;
+      margin-top: 30px;
     }
 
     details {
@@ -307,63 +343,64 @@
 
     summary {
       cursor: pointer;
-      font-size: 17px;
+      font-size: 16px;
       font-weight: 500;
     }
 
     details p {
-      padding-top: 15px;
-      color: #5b665f;
+      padding-top: 13px;
+      color: #687168;
+      font-size: 15px;
     }
 
-    /* =========================
-       CONTACTO
-    ========================= */
+    /* CONTACTO */
 
     .contact-box {
+      margin-top: 30px;
+      padding: 42px;
+      border-radius: 22px;
       background: #34443b;
       color: white;
-      padding: 45px;
-      border-radius: 25px;
-      margin-top: 35px;
     }
 
     .contact-box h3 {
-      font-size: 28px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 29px;
       font-weight: 400;
+      line-height: 1.3;
       margin-bottom: 15px;
     }
 
     .contact-box p {
-      color: #e9eee9;
+      color: #e5e9e4;
       margin-bottom: 25px;
     }
 
     .contact-links {
       display: flex;
       flex-wrap: wrap;
-      gap: 15px;
+      gap: 20px;
     }
 
     .contact-links a {
       color: white;
       text-decoration: none;
-      border-bottom: 1px solid rgba(255,255,255,0.5);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.5);
       padding-bottom: 3px;
+      font-size: 14px;
     }
 
     .contact-links a:hover {
-      color: #d8c98f;
+      color: #e4d69f;
     }
 
-    /* =========================
-       FOOTER
-    ========================= */
+    /* PIE DE PÁGINA */
 
     footer {
-      padding: 35px 30px;
+      padding: 30px;
       background: #29362f;
       color: #dce2dc;
+      font-size: 13px;
     }
 
     .footer-container {
@@ -382,51 +419,41 @@
     }
 
     footer a:hover {
-      color: #d8c98f;
+      color: #e4d69f;
     }
 
-    /* =========================
-       TABLET
-    ========================= */
+    /* TABLET */
 
-    @media (max-width: 850px) {
-
-      .hero {
-        grid-template-columns: 1fr;
-        padding-top: 60px;
-      }
-
-      .hero-text {
-        max-width: 700px;
-      }
-
-      .hero-images {
-        max-width: 650px;
-        margin: auto;
+    @media (max-width: 900px) {
+      .nav-container {
+        flex-wrap: wrap;
       }
 
       .nav-links {
         gap: 15px;
+        flex-wrap: wrap;
       }
 
-      .cards,
-      .areas {
+      .hero {
         grid-template-columns: 1fr;
+        gap: 35px;
+        padding-top: 60px;
+      }
+
+      .hero-text {
+        max-width: 650px;
+      }
+
+      .hero-images {
+        max-width: 520px;
       }
     }
 
-    /* =========================
-       MÓVIL
-    ========================= */
+    /* MÓVIL */
 
     @media (max-width: 600px) {
-
       .nav-container {
         padding: 15px 20px;
-      }
-
-      .logo {
-        font-size: 17px;
       }
 
       .nav-links {
@@ -434,50 +461,67 @@
       }
 
       .hero {
-        padding: 50px 20px;
-        gap: 30px;
+        padding: 48px 22px 60px;
+        gap: 25px;
+        min-height: auto;
       }
 
       .hero h1 {
-        font-size: 45px;
+        font-size: 49px;
       }
 
       .hero h2 {
-        font-size: 20px;
+        font-size: 19px;
+      }
+
+      .hero p {
+        font-size: 15px;
       }
 
       .hero-images {
-        height: 450px;
+        height: 430px;
+        max-width: 390px;
       }
 
       .main-photo {
-        width: 72%;
-        height: 360px;
-        right: 12%;
-        top: 35px;
+        top: 25px;
+        width: 76%;
+        height: 355px;
+        padding: 7px;
+        border-radius: 20px;
       }
 
       .plant-one {
-        width: 38%;
-        height: 160px;
-        bottom: 20px;
+        width: 31%;
+        height: 135px;
+        bottom: 8px;
       }
 
       .plant-two {
-        width: 32%;
-        height: 145px;
+        width: 27%;
+        height: 120px;
       }
 
       section {
-        padding: 65px 20px;
+        padding: 62px 22px;
       }
 
       .section-title {
         font-size: 32px;
       }
 
+      .cards,
+      .areas,
+      .steps {
+        grid-template-columns: 1fr;
+      }
+
       .contact-box {
-        padding: 30px 25px;
+        padding: 29px 23px;
+      }
+
+      .contact-box h3 {
+        font-size: 25px;
       }
 
       .footer-container {
@@ -485,8 +529,7 @@
       }
 
       footer a {
-        margin-left: 0;
-        margin-right: 15px;
+        margin: 0 15px 0 0;
       }
     }
   </style>
@@ -494,49 +537,32 @@
 
 <body>
 
-  <!-- =========================
-       NAVEGACIÓN
-  ========================= -->
+  <!-- NAVEGACIÓN -->
 
   <nav>
     <div class="nav-container">
-
-      <a href="#" class="logo">
-        Daniel Ordóñez
-      </a>
+      <a href="#" class="logo">Daniel Ordóñez</a>
 
       <ul class="nav-links">
         <li><a href="#sobre-mi">Conóceme</a></li>
         <li><a href="#formacion">Formación y experiencia</a></li>
         <li><a href="#areas">Áreas de interés</a></li>
-        <li><a href="#enfoque">Cómo entiendo la psicología</a></li>
+        <li><a href="#enfoque">Mi enfoque</a></li>
         <li><a href="#contacto">Hablamos</a></li>
       </ul>
-
     </div>
   </nav>
 
-
-  <!-- =========================
-       PORTADA
-  ========================= -->
+  <!-- PORTADA -->
 
   <header class="hero">
 
     <div class="hero-text">
+      <div class="small-title">Psicología</div>
 
-      <div class="small-title">
-        Psicología
-      </div>
+      <h1>Daniel<br>Ordóñez</h1>
 
-      <h1>
-        Daniel<br>
-        Ordóñez
-      </h1>
-
-      <h2>
-        Psicólogo General Sanitario
-      </h2>
+      <h2>Psicólogo General Sanitario</h2>
 
       <p>
         Un espacio para comprender lo que te ocurre,
@@ -545,41 +571,27 @@
       </p>
 
       <div class="buttons">
-
-        <a href="#sobre-mi" class="button primary">
-          Conóceme
-        </a>
-
-        <a href="#contacto" class="button secondary">
-          Contactar
-        </a>
-
+        <a href="#sobre-mi" class="button primary">Conóceme</a>
+        <a href="#contacto" class="button secondary">Contactar</a>
       </div>
-
     </div>
 
-
-    <!-- =========================
-         FOTOS
-    ========================= -->
+    <!-- FOTOS: MANTENER LOS TRES ARCHIVOS EN GITHUB -->
 
     <div class="hero-images">
 
-      <!-- FOTO PRINCIPAL -->
       <img
         src="IMG_9980.jpg"
         alt="Daniel Ordóñez Puente"
         class="main-photo"
       >
 
-      <!-- PLANTA 1 -->
       <img
         src="pexels-skylake-19859227.jpg"
         alt="Planta decorativa"
         class="plant-one"
       >
 
-      <!-- PLANTA 2 -->
       <img
         src="pexels-yunusemresahinoglu-11105528.jpg"
         alt="Planta decorativa"
@@ -587,46 +599,28 @@
       >
 
     </div>
-
   </header>
 
-
-  <!-- =========================
-       SOBRE MÍ
-  ========================= -->
+  <!-- SOBRE MÍ -->
 
   <section id="sobre-mi">
-
     <div class="section-container">
-
-      <h2 class="section-title">
-        Sobre mí
-      </h2>
+      <h2 class="section-title">Sobre mí</h2>
 
       <p class="section-text">
-        Soy Daniel Ordóñez Puente, psicólogo en formación
-        sanitaria y con formación en Terapia Sistémica.
-        Mi interés por la psicología parte de una idea sencilla:
-        entender a la persona teniendo en cuenta su historia,
-        sus relaciones y el contexto en el que vive.
+        Soy Daniel Ordóñez Puente. Mi interés por la
+        psicología parte de una idea sencilla: entender a
+        la persona teniendo en cuenta su historia, sus
+        relaciones y el contexto en el que vive.
       </p>
-
     </div>
-
   </section>
 
-
-  <!-- =========================
-       FORMACIÓN
-  ========================= -->
+  <!-- FORMACIÓN Y EXPERIENCIA -->
 
   <section id="formacion">
-
     <div class="section-container">
-
-      <h2 class="section-title">
-        Formación y experiencia
-      </h2>
+      <h2 class="section-title">Formación y experiencia</h2>
 
       <p class="section-text">
         Mi formación combina la Psicología General Sanitaria,
@@ -637,79 +631,34 @@
       <div class="cards">
 
         <div class="card">
-
-          <h3>
-            Máster en Psicología General Sanitaria
-          </h3>
-
-          <p>
-            Universidad Francisco de Vitoria
-          </p>
-
+          <h3>Máster en Psicología General Sanitaria</h3>
+          <p>Universidad Francisco de Vitoria.</p>
         </div>
 
-
         <div class="card">
-
-          <h3>
-            Experto en Terapia Sistémica
-          </h3>
-
-          <p>
-            Formación especializada en intervención
-            familiar y de pareja.
-          </p>
-
+          <h3>Experto en Terapia Sistémica</h3>
+          <p>Formación especializada en intervención familiar y de pareja.</p>
         </div>
 
-
         <div class="card">
-
-          <h3>
-            Experiencia clínica
-          </h3>
-
-          <p>
-            Experiencia práctica con población infantil,
-            adolescente y joven adulta en diferentes
-            contextos de intervención.
-          </p>
-
+          <h3>Experiencia clínica</h3>
+          <p>Experiencia práctica con población infantil, adolescente y joven adulta.</p>
         </div>
 
-
         <div class="card">
-
-          <h3>
-            Intervención infantil
-          </h3>
-
-          <p>
-            Experiencia en intervención con niños y niñas,
-            especialmente en el ámbito del TEA y el trabajo
-            coordinado con familias y otros profesionales.
-          </p>
-
+          <h3>Intervención infantil</h3>
+          <p>Experiencia en intervención con niños y niñas con TEA y coordinación con otros profesionales.</p>
         </div>
 
       </div>
-
     </div>
-
   </section>
 
-
-  <!-- =========================
-       ÁREAS
-  ========================= -->
+  <!-- ÁREAS DE INTERÉS -->
 
   <section id="areas">
-
     <div class="section-container">
-
-      <h2 class="section-title">
-        Áreas de interés
-      </h2>
+      <h2 class="section-title">Áreas de interés</h2>
 
       <p class="section-text">
         Algunas de las áreas que forman parte de mi interés
@@ -720,257 +669,170 @@
 
         <div class="area">
           <h3>Ansiedad</h3>
-          <p>
-            Comprender qué está manteniendo el malestar
-            y trabajar nuevas formas de afrontarlo.
-          </p>
+          <p>Comprender qué está manteniendo el malestar y explorar nuevas formas de afrontarlo.</p>
         </div>
 
         <div class="area">
           <h3>Adolescencia</h3>
-          <p>
-            Acompañar los cambios, dificultades y retos
-            propios de esta etapa.
-          </p>
+          <p>Acompañar los cambios, dificultades y retos propios de esta etapa.</p>
         </div>
 
         <div class="area">
           <h3>Familia y pareja</h3>
-          <p>
-            Comprender las relaciones y los patrones que
-            pueden estar influyendo en las dificultades.
-          </p>
+          <p>Comprender las relaciones y los patrones que pueden influir en las dificultades.</p>
         </div>
 
         <div class="area">
-          <h3>Infancia y adolescencia</h3>
-          <p>
-            Intervención adaptada a las necesidades
-            de cada persona y su contexto.
-          </p>
+          <h3>Infancia</h3>
+          <p>Intervención adaptada a las necesidades de cada niño o niña y su contexto.</p>
         </div>
 
         <div class="area">
           <h3>TEA</h3>
-          <p>
-            Experiencia en intervención con personas
-            dentro del espectro autista y sus familias.
-          </p>
+          <p>Experiencia en intervención con personas dentro del espectro autista y sus familias.</p>
         </div>
 
         <div class="area">
           <h3>Regulación emocional</h3>
-          <p>
-            Aprender a comprender y relacionarse de otra
-            manera con las propias emociones.
-          </p>
+          <p>Comprender las emociones y desarrollar diferentes maneras de relacionarse con ellas.</p>
         </div>
 
       </div>
-
     </div>
-
   </section>
 
-
-  <!-- =========================
-       ENFOQUE
-  ========================= -->
+  <!-- MI ENFOQUE -->
 
   <section id="enfoque">
-
     <div class="section-container">
-
-      <h2 class="section-title">
-        Cómo entiendo la psicología
-      </h2>
+      <h2 class="section-title">Cómo entiendo la psicología</h2>
 
       <p class="section-text">
         Entiendo la psicología como un espacio en el que
         poder comprender lo que nos ocurre sin reducirlo
-        únicamente a una etiqueta. Por eso considero
-        importante trabajar desde la evidencia científica,
-        pero también desde la cercanía y teniendo en cuenta
-        la historia y el contexto de cada persona.
+        únicamente a una etiqueta. Considero importante
+        trabajar desde la evidencia científica, pero también
+        desde la cercanía y teniendo en cuenta la historia
+        y el contexto de cada persona.
       </p>
-
     </div>
-
   </section>
 
+  <!-- CÓMO EMPEZAR -->
 
-  <!-- =========================
-       CÓMO EMPEZAR
-  ========================= -->
-
-  <section>
-
+  <section id="empezar">
     <div class="section-container">
-
-      <h2 class="section-title">
-        ¿Cómo sería empezar?
-      </h2>
+      <h2 class="section-title">¿Cómo sería empezar?</h2>
 
       <p class="section-text">
         El primer paso sería conocernos y entender qué te
         está llevando a buscar ayuda. A partir de ahí,
-        iremos definiendo juntos qué necesitas y cómo
-        podemos trabajar en ello.
+        iremos definiendo qué necesitas y cómo podemos
+        trabajar en ello.
       </p>
 
-    </div>
+      <div class="steps">
 
+        <div class="step">
+          <span class="step-number">1</span>
+          <h3>Nos conocemos</h3>
+          <p>Un primer espacio para hablar de tu situación y de lo que necesitas.</p>
+        </div>
+
+        <div class="step">
+          <span class="step-number">2</span>
+          <h3>Comprendemos</h3>
+          <p>Exploramos qué te ocurre y qué factores pueden estar influyendo.</p>
+        </div>
+
+        <div class="step">
+          <span class="step-number">3</span>
+          <h3>Trabajamos juntos</h3>
+          <p>Definimos objetivos y avanzamos de manera adaptada a tu situación.</p>
+        </div>
+
+      </div>
+    </div>
   </section>
 
+  <!-- PREGUNTAS FRECUENTES -->
 
-  <!-- =========================
-       FAQ
-  ========================= -->
-
-  <section>
-
+  <section id="preguntas">
     <div class="section-container">
-
-      <h2 class="section-title">
-        Preguntas frecuentes
-      </h2>
+      <h2 class="section-title">Preguntas frecuentes</h2>
 
       <div class="faq">
 
         <details>
-          <summary>
-            ¿Tengo que saber exactamente qué me pasa?
-          </summary>
-
-          <p>
-            No. Parte del proceso consiste precisamente
-            en comprender qué está ocurriendo y ponerle
-            palabras.
-          </p>
+          <summary>¿Tengo que saber exactamente qué me pasa?</summary>
+          <p>No. Parte del proceso consiste precisamente en comprender qué está ocurriendo y ponerle palabras.</p>
         </details>
 
-
         <details>
-          <summary>
-            ¿Qué ocurre en la primera sesión?
-          </summary>
-
-          <p>
-            La primera sesión sirve principalmente para
-            conocernos, conocer tu situación y entender
-            qué te gustaría trabajar.
-          </p>
+          <summary>¿Qué ocurre en la primera sesión?</summary>
+          <p>La primera sesión sirve para conocernos, hablar de tu situación y entender qué te gustaría trabajar.</p>
         </details>
 
-
         <details>
-          <summary>
-            ¿La terapia tiene que ser siempre igual?
-          </summary>
-
-          <p>
-            No. El proceso se adapta a las necesidades,
-            objetivos y circunstancias de cada persona.
-          </p>
+          <summary>¿La terapia tiene que ser siempre igual?</summary>
+          <p>No. El proceso se adapta a las necesidades, objetivos y circunstancias de cada persona.</p>
         </details>
 
       </div>
-
     </div>
-
   </section>
 
-
-  <!-- =========================
-       CONTACTO
-  ========================= -->
+  <!-- CONTACTO -->
 
   <section id="contacto">
-
     <div class="section-container">
-
-      <h2 class="section-title">
-        Hablamos
-      </h2>
+      <h2 class="section-title">Hablamos</h2>
 
       <div class="contact-box">
-
-        <h3>
-          Si estás pensando en empezar,
-          podemos hablar.
-        </h3>
+        <h3>Si estás pensando en empezar, podemos hablar.</h3>
 
         <p>
-          Puedes escribirme para resolver tus dudas
-          y conocer cómo sería el proceso.
+          Puedes escribirme para resolver tus dudas y conocer
+          cómo sería el proceso.
         </p>
 
         <div class="contact-links">
-
-          <a href="mailto:danielordo17@gmail.com">
-            Email
-          </a>
+          <a href="mailto:danielordo17@gmail.com">Email</a>
 
           <a
             href="https://www.instagram.com/daniel.ordonez.psicologo/"
             target="_blank"
-          >
-            Instagram
-          </a>
+            rel="noopener noreferrer"
+          >Instagram</a>
 
           <a
             href="https://www.tiktok.com/"
             target="_blank"
-          >
-            TikTok
-          </a>
+            rel="noopener noreferrer"
+          >TikTok</a>
 
           <a
             href="https://www.linkedin.com/in/daniel-ordonez-puente/"
             target="_blank"
-          >
-            LinkedIn
-          </a>
-
+            rel="noopener noreferrer"
+          >LinkedIn</a>
         </div>
-
       </div>
-
     </div>
-
   </section>
 
-
-  <!-- =========================
-       FOOTER
-  ========================= -->
+  <!-- PIE DE PÁGINA -->
 
   <footer>
-
     <div class="footer-container">
+      <div>© 2026 Daniel Ordóñez Puente</div>
 
       <div>
-        © 2026 Daniel Ordóñez Puente
+        <a href="/aviso-legal.html">Aviso legal</a>
+        <a href="/privacidad.html">Privacidad</a>
+        <a href="/cookies.html">Cookies</a>
       </div>
-
-      <div>
-
-        <a href="/aviso-legal.html">
-          Aviso legal
-        </a>
-
-        <a href="/privacidad.html">
-          Privacidad
-        </a>
-
-        <a href="/cookies.html">
-          Cookies
-        </a>
-
-      </div>
-
     </div>
-
   </footer>
 
 </body>
